@@ -26,11 +26,170 @@ mlconjug = None
 wordnet = None
 wn = None
 
-# === MINIMAL FRENCH LEXICON ===
+# === FULL FRENCH LEXICON (100+ words) ===
 FRENCH_LEXICON = {
     "être": {"pos": "verbe", "def": "avoir une existence", "ex": "Je suis heureux."},
     "avoir": {"pos": "verbe", "def": "posséder", "ex": "J'ai un livre."},
-    "maison": {"pos": "nom", "def": "bâtiment", "ex": "La maison est bleue."}
+    "faire": {"pos": "verbe", "def": "accomplir une action", "ex": "Fais attention !"},
+    "dire": {"pos": "verbe", "def": "exprimer par la parole", "ex": "Il dit la vérité."},
+    "aller": {"pos": "verbe", "def": "se déplacer", "ex": "Je vais à l'école."},
+    "voir": {"pos": "verbe", "def": "percevoir avec les yeux", "ex": "Je vois un chat."},
+    "prendre": {"pos": "verbe", "def": "saisir", "ex": "Prends ton sac."},
+    "pouvoir": {"pos": "verbe", "def": "avoir la capacité", "ex": "Je peux aider."},
+    "devoir": {"pos": "verbe", "def": "être obligé", "ex": "Je dois partir."},
+    "vouloir": {"pos": "verbe", "def": "avoir envie", "ex": "Je veux réussir."},
+    "savoir": {"pos": "verbe", "def": "connaître une information", "ex": "Je sais la réponse."},
+    "connaître": {"pos": "verbe", "def": "avoir de l'expérience", "ex": "Je connais Paris."},
+    "mettre": {"pos": "verbe", "def": "placer", "ex": "Mets le livre sur la table."},
+    "donner": {"pos": "verbe", "def": "offrir", "ex": "Il donne un cadeau."},
+    "trouver": {"pos": "verbe", "def": "localiser", "ex": "J'ai trouvé les clés."},
+    "demander": {"pos": "verbe", "def": "poser une question", "ex": "Je demande de l'aide."},
+    "parler": {"pos": "verbe", "def": "s'exprimer oralement", "ex": "Je parle français."},
+    "comprendre": {"pos": "verbe", "def": "saisir le sens", "ex": "Je comprends la leçon."},
+    "apprendre": {"pos": "verbe", "def": "acquérir des connaissances", "ex": "J'apprends le français."},
+    "travailler": {"pos": "verbe", "def": "exercer une activité professionnelle", "ex": "Je travaille dans un bureau."},
+    "habiter": {"pos": "verbe", "def": "vivre dans un lieu", "ex": "J'habite à Paris."},
+    "aimer": {"pos": "verbe", "def": "avoir de l'affection", "ex": "J'aime la musique."},
+    "penser": {"pos": "verbe", "def": "avoir une opinion", "ex": "Je pense que c'est vrai."},
+    "sentir": {"pos": "verbe", "def": "percevoir une odeur ou une émotion", "ex": "Je sens une fleur."},
+    "rester": {"pos": "verbe", "def": "demeurer", "ex": "Reste ici !"},
+    "tenir": {"pos": "verbe", "def": "maintenir en place", "ex": "Tiens ce sac."},
+    "venir": {"pos": "verbe", "def": "se déplacer vers ici", "ex": "Viens avec moi."},
+    "arriver": {"pos": "verbe", "def": "atteindre un lieu", "ex": "Il arrive bientôt."},
+    "partir": {"pos": "verbe", "def": "quitter un lieu", "ex": "Je pars maintenant."},
+    "rentrer": {"pos": "verbe", "def": "retourner chez soi", "ex": "Je rentre à la maison."},
+    "sortir": {"pos": "verbe", "def": "aller dehors", "ex": "Nous sortons ce soir."},
+    "entrer": {"pos": "verbe", "def": "aller à l'intérieur", "ex": "Entrez, s'il vous plaît."},
+    "monter": {"pos": "verbe", "def": "aller vers le haut", "ex": "Monte l'escalier."},
+    "descendre": {"pos": "verbe", "def": "aller vers le bas", "ex": "Descends de là !"},
+    "passer": {"pos": "verbe", "def": "aller d'un côté à l'autre", "ex": "Passe-moi le sel."},
+    "finir": {"pos": "verbe", "def": "terminer", "ex": "Finis ton devoir."},
+    "commencer": {"pos": "verbe", "def": "initier une action", "ex": "Commence maintenant."},
+    "continuer": {"pos": "verbe", "def": "ne pas s'arrêter", "ex": "Continue à marcher."},
+    "changer": {"pos": "verbe", "def": "devenir différent", "ex": "Tout peut changer."},
+    "essayer": {"pos": "verbe", "def": "faire une tentative", "ex": "Essaye encore."},
+    "réussir": {"pos": "verbe", "def": "atteindre le succès", "ex": "Il réussit son examen."},
+    "échouer": {"pos": "verbe", "def": "ne pas réussir", "ex": "Ne pas échouer."},
+    "gagner": {"pos": "verbe", "def": "obtenir une victoire", "ex": "Nous gagnons le match."},
+    "perdre": {"pos": "verbe", "def": "ne plus avoir", "ex": "J'ai perdu mes clés."},
+    "ouvrir": {"pos": "verbe", "def": "rendre accessible", "ex": "Ouvre la porte."},
+    "fermer": {"pos": "verbe", "def": "rendre inaccessible", "ex": "Ferme la fenêtre."},
+    "lire": {"pos": "verbe", "def": "déchiffrer du texte", "ex": "Je lis un roman."},
+    "écrire": {"pos": "verbe", "def": "tracer des signes", "ex": "J'écris une lettre."},
+    "écouter": {"pos": "verbe", "def": "prêter attention", "ex": "Écoute la musique."},
+    "regarder": {"pos": "verbe", "def": "observer avec les yeux", "ex": "Regarde ce film."},
+    "manger": {"pos": "verbe", "def": "consommer de la nourriture", "ex": "Je mange une pomme."},
+    "boire": {"pos": "verbe", "def": "consommer un liquide", "ex": "Bois de l'eau."},
+    "dormir": {"pos": "verbe", "def": "reposer son corps", "ex": "Je dors huit heures."},
+    "vivre": {"pos": "verbe", "def": "être en vie", "ex": "Je vis en France."},
+    "mourir": {"pos": "verbe", "def": "cesser de vivre", "ex": "Les feuilles meurent en hiver."},
+    "homme": {"pos": "nom", "def": "être humain masculin", "ex": "Cet homme est gentil."},
+    "femme": {"pos": "nom", "def": "être humain féminin", "ex": "Cette femme est intelligente."},
+    "enfant": {"pos": "nom", "def": "jeune être humain", "ex": "L'enfant joue."},
+    "ami": {"pos": "nom", "def": "personne chère", "ex": "Mon ami m'aide."},
+    "maison": {"pos": "nom", "def": "bâtiment d'habitation", "ex": "La maison est grande."},
+    "voiture": {"pos": "nom", "def": "véhicule à moteur", "ex": "La voiture est rouge."},
+    "ville": {"pos": "nom", "def": "grand ensemble urbain", "ex": "Paris est une grande ville."},
+    "pays": {"pos": "nom", "def": "nation", "ex": "La France est un beau pays."},
+    "monde": {"pos": "nom", "def": "planète Terre", "ex": "Le monde est vaste."},
+    "jour": {"pos": "nom", "def": "période de lumière", "ex": "Bon jour !"},
+    "nuit": {"pos": "nom", "def": "période d'obscurité", "ex": "La nuit est calme."},
+    "temps": {"pos": "nom", "def": "durée ou météo", "ex": "Il fait beau temps."},
+    "année": {"pos": "nom", "def": "période de 365 jours", "ex": "Cette année est spéciale."},
+    "mois": {"pos": "nom", "def": "période d'environ 30 jours", "ex": "Janvier est un mois froid."},
+    "semaine": {"pos": "nom", "def": "période de 7 jours", "ex": "Une semaine de vacances."},
+    "heure": {"pos": "nom", "def": "période de 60 minutes", "ex": "Il est trois heures."},
+    "minute": {"pos": "nom", "def": "période de 60 secondes", "ex": "Attends une minute."},
+    "seconde": {"pos": "nom", "def": "unité de temps", "ex": "Une seconde suffit."},
+    "eau": {"pos": "nom", "def": "liquide transparent", "ex": "Je bois de l'eau."},
+    "feu": {"pos": "nom", "def": "combustion", "ex": "Le feu brûle."},
+    "air": {"pos": "nom", "def": "mélange gazeux", "ex": "L'air est pur."},
+    "terre": {"pos": "nom", "def": "sol ou planète", "ex": "La Terre est bleue."},
+    "ciel": {"pos": "nom", "def": "espace au-dessus de la terre", "ex": "Le ciel est bleu."},
+    "mer": {"pos": "nom", "def": "grande étendue d'eau salée", "ex": "La mer est calme."},
+    "fleur": {"pos": "nom", "def": "organe reproducteur des plantes", "ex": "Cette fleur est belle."},
+    "arbre": {"pos": "nom", "def": "plante ligneuse", "ex": "L'arbre donne de l'ombre."},
+    "chat": {"pos": "nom", "def": "animal domestique", "ex": "Le chat dort."},
+    "chien": {"pos": "nom", "def": "animal domestique fidèle", "ex": "Le chien aboie."},
+    "oiseau": {"pos": "nom", "def": "animal volant", "ex": "L'oiseau chante."},
+    "poisson": {"pos": "nom", "def": "animal aquatique", "ex": "Le poisson nage."},
+    "livre": {"pos": "nom", "def": "ouvrage imprimé", "ex": "Je lis un livre."},
+    "lettre": {"pos": "nom", "def": "caractère ou message écrit", "ex": "Écris une lettre."},
+    "mot": {"pos": "nom", "def": "unité de langage", "ex": "Ce mot est difficile."},
+    "phrase": {"pos": "nom", "def": "groupe de mots", "ex": "Cette phrase est longue."},
+    "langue": {"pos": "nom", "def": "système de communication", "ex": "Le français est ma langue."},
+    "voix": {"pos": "nom", "def": "son produit par la parole", "ex": "Sa voix est douce."},
+    "main": {"pos": "nom", "def": "partie du corps", "ex": "Donne-moi la main."},
+    "pied": {"pos": "nom", "def": "extrémité de la jambe", "ex": "J'ai mal au pied."},
+    "tête": {"pos": "nom", "def": "partie supérieure du corps", "ex": "Ma tête tourne."},
+    "cœur": {"pos": "nom", "def": "organe ou symbole d'amour", "ex": "Mon cœur bat vite."},
+    "bouche": {"pos": "nom", "def": "organe de la parole et de la nourriture", "ex": "Ferme la bouche."},
+    "yeux": {"pos": "nom", "def": "organes de la vue", "ex": "Mes yeux sont fatigués."},
+    "nez": {"pos": "nom", "def": "organe de l'odorat", "ex": "Mon nez coule."},
+    "oreilles": {"pos": "nom", "def": "organes de l'ouïe", "ex": "Mes oreilles sifflent."},
+    "peau": {"pos": "nom", "def": "enveloppe du corps", "ex": "Ma peau est sèche."},
+    "cheveux": {"pos": "nom", "def": "filaments sur la tête", "ex": "Mes cheveux sont longs."},
+    "grand": {"pos": "adjectif", "def": "de grande taille", "ex": "Un grand arbre."},
+    "petit": {"pos": "adjectif", "def": "de petite taille", "ex": "Un petit chien."},
+    "beau": {"pos": "adjectif", "def": "agréable à voir", "ex": "Une belle fleur."},
+    "bon": {"pos": "adjectif", "def": "de bonne qualité", "ex": "Un bon repas."},
+    "mauvais": {"pos": "adjectif", "def": "de mauvaise qualité", "ex": "Un mauvais film."},
+    "vieux": {"pos": "adjectif", "def": "ancien", "ex": "Un vieux livre."},
+    "nouveau": {"pos": "adjectif", "def": "récent", "ex": "Une nouvelle voiture."},
+    "jeune": {"pos": "adjectif", "def": "pas vieux", "ex": "Un jeune homme."},
+    "fort": {"pos": "adjectif", "def": "ayant de la force", "ex": "Il est très fort."},
+    "faible": {"pos": "adjectif", "def": "manquant de force", "ex": "Je me sens faible."},
+    "rapide": {"pos": "adjectif", "def": "allant vite", "ex": "Une voiture rapide."},
+    "lent": {"pos": "adjectif", "def": "allant lentement", "ex": "Un escargot est lent."},
+    "chaud": {"pos": "adjectif", "def": "ayant une température élevée", "ex": "L'eau est chaude."},
+    "froid": {"pos": "adjectif", "def": "ayant une température basse", "ex": "L'hiver est froid."},
+    "clair": {"pos": "adjectif", "def": "bien éclairé", "ex": "Le ciel est clair."},
+    "sombre": {"pos": "adjectif", "def": "mal éclairé", "ex": "La pièce est sombre."},
+    "plein": {"pos": "adjectif", "def": "rempli", "ex": "Le verre est plein."},
+    "vide": {"pos": "adjectif", "def": "pas rempli", "ex": "La bouteille est vide."},
+    "propre": {"pos": "adjectif", "def": "sans saleté", "ex": "Les vêtements sont propres."},
+    "sale": {"pos": "adjectif", "def": "avec de la saleté", "ex": "Les chaussures sont sales."},
+    "facile": {"pos": "adjectif", "def": "sans difficulté", "ex": "C'est une question facile."},
+    "difficile": {"pos": "adjectif", "def": "avec difficulté", "ex": "C'est un exercice difficile."},
+    "important": {"pos": "adjectif", "def": "ayant de l'importance", "ex": "C'est très important."},
+    "utile": {"pos": "adjectif", "def": "qui sert à quelque chose", "ex": "Ce conseil est utile."},
+    "inutile": {"pos": "adjectif", "def": "qui ne sert à rien", "ex": "C'est une remarque inutile."},
+    "possible": {"pos": "adjectif", "def": "qui peut exister", "ex": "Tout est possible."},
+    "impossible": {"pos": "adjectif", "def": "qui ne peut pas exister", "ex": "C'est impossible !"},
+    "vrai": {"pos": "adjectif", "def": "conforme à la réalité", "ex": "C'est la vérité."},
+    "faux": {"pos": "adjectif", "def": "non conforme à la réalité", "ex": "C'est un faux document."},
+    "libre": {"pos": "adjectif", "def": "non prisonnier", "ex": "Je suis libre."},
+    "occupé": {"pos": "adjectif", "def": "non disponible", "ex": "Je suis occupé."},
+    "content": {"pos": "adjectif", "def": "heureux", "ex": "Je suis content."},
+    "triste": {"pos": "adjectif", "def": "malheureux", "ex": "Il est triste."},
+    "heureux": {"pos": "adjectif", "def": "joyeux", "ex": "Elle est heureuse."},
+    "malheureux": {"pos": "adjectif", "def": "pas heureux", "ex": "Il est malheureux."},
+    "calme": {"pos": "adjectif", "def": "paisible", "ex": "Sois calme."},
+    "agité": {"pos": "adjectif", "def": "pas calme", "ex": "L'enfant est agité."},
+    "gentil": {"pos": "adjectif", "def": "aimable", "ex": "Il est gentil."},
+    "méchant": {"pos": "adjectif", "def": "cruel", "ex": "Il est méchant."},
+    "intelligent": {"pos": "adjectif", "def": "ayant de l'intelligence", "ex": "Elle est intelligente."},
+    "bête": {"pos": "adjectif", "def": "pas intelligent", "ex": "C'est une bête question."},
+    "riche": {"pos": "adjectif", "def": "ayant beaucoup d'argent", "ex": "Il est riche."},
+    "pauvre": {"pos": "adjectif", "def": "n'ayant pas d'argent", "ex": "Le pays est pauvre."},
+    "cher": {"pos": "adjectif", "def": "coûteux", "ex": "Cette montre est chère."},
+    "bon marché": {"pos": "adjectif", "def": "peu coûteux", "ex": "C'est bon marché."},
+    "proche": {"pos": "adjectif", "def": "pas loin", "ex": "La gare est proche."},
+    "loin": {"pos": "adjectif", "def": "à grande distance", "ex": "L'école est loin."},
+    "haut": {"pos": "adjectif", "def": "de grande altitude", "ex": "La montagne est haute."},
+    "bas": {"pos": "adjectif", "def": "de faible altitude", "ex": "Le ciel est bas."},
+    "long": {"pos": "adjectif", "def": "de grande longueur", "ex": "Une longue route."},
+    "court": {"pos": "adjectif", "def": "de faible longueur", "ex": "Une courte réponse."},
+    "large": {"pos": "adjectif", "def": "de grande largeur", "ex": "Une large rue."},
+    "étroit": {"pos": "adjectif", "def": "de faible largeur", "ex": "Un étroit passage."},
+    "épais": {"pos": "adjectif", "def": "de grande épaisseur", "ex": "Un épais livre."},
+    "mince": {"pos": "adjectif", "def": "de faible épaisseur", "ex": "Une mince feuille."},
+    "lourd": {"pos": "adjectif", "def": "de grand poids", "ex": "Ce sac est lourd."},
+    "léger": {"pos": "adjectif", "def": "de faible poids", "ex": "Une plume est légère."},
+    "dur": {"pos": "adjectif", "def": "solide", "ex": "Le bois est dur."},
+    "mou": {"pos": "adjectif", "def": "pas solide", "ex": "Le pain est mou."},
+    "doux": {"pos": "adjectif", "def": "agréable au toucher", "ex": "Le tissu est doux."},
+    "rude": {"pos": "adjectif", "def": "désagréable au toucher", "ex": "Le tissu est rude."}
 }
 
 # === TRANSLATIONS ===
@@ -162,35 +321,40 @@ def apply_style_mode(text, mode, lang):
     return issues
 
 # === DICTIONARY HELPERS ===
-def init_nltk():
-    global wordnet, wn
-    if wordnet is None:
-        try:
-            import nltk
-            from nltk.corpus import wordnet as wn_mod
-            try:
-                wn_mod.synsets("test")
-            except LookupError:
-                nltk.download('wordnet', quiet=True)
-            wordnet = wn_mod
-            wn = wn_mod
-        except ImportError:
-            pass
-
 def lookup_english(word):
-    init_nltk()
-    if wn is None:
-        return {"error": "nltk"}
-    synsets = wn.synsets(word)
-    if not synsets:
-        return {"def": "Not found", "ex": ""}
-    return {"def": synsets[0].definition(), "ex": synsets[0].examples()[0] if synsets[0].examples() else ""}
+    """Get definition and example from WordNet (NLTK)."""
+    try:
+        import nltk
+        from nltk.corpus import wordnet as wn
+        # Ensure WordNet is downloaded
+        try:
+            wn.synsets("test")
+        except LookupError:
+            nltk.download('wordnet', quiet=True)
+            nltk.download('omw-1.4', quiet=True)
+        
+        synsets = wn.synsets(word)
+        if not synsets:
+            return {"def": "Word not found in English dictionary.", "pos": "", "ex": ""}
+        
+        # Use first synset
+        syn = synsets[0]
+        pos_map = {'n': 'noun', 'v': 'verb', 'a': 'adjective', 'r': 'adverb'}
+        pos = pos_map.get(syn.pos(), syn.pos())
+        definition = syn.definition()
+        examples = syn.examples()
+        example = examples[0] if examples else ""
+        return {"def": definition, "pos": pos, "ex": example}
+    except Exception as e:
+        return {"def": f"English dictionary error: {str(e)}", "pos": "", "ex": ""}
 
 def lookup_french(word):
-    entry = FRENCH_LEXICON.get(word.lower())
+    """Lookup in embedded French lexicon."""
+    word = word.lower()
+    entry = FRENCH_LEXICON.get(word)
     if entry:
-        return {"def": entry["def"], "ex": entry["ex"]}
-    return {"def": "Non trouvé", "ex": ""}
+        return {"def": entry["def"], "pos": entry["pos"], "ex": entry["ex"]}
+    return {"def": "Mot non trouvé dans le dictionnaire français.", "pos": "", "ex": ""}
 
 # === CONFIGURATION ===
 CONFIG_DIR = Path.home() / ".config" / "correcto"
@@ -223,7 +387,7 @@ def save_config(cfg):
     except Exception:
         pass
 
-# === ANALYSIS THREAD (SIMPLIFIED & ROBUST) ===
+# === ANALYSIS THREAD ===
 class AnalyzerThread(QThread):
     result_ready = pyqtSignal(dict)
 
@@ -247,7 +411,6 @@ class AnalyzerThread(QThread):
             tool = language_tool.LanguageTool(self.lang)
             matches = tool.check(self.text)
 
-            # Collect grammar issues with full context
             grammar_issues = []
             for m in matches:
                 grammar_issues.append({
@@ -256,7 +419,6 @@ class AnalyzerThread(QThread):
                     'suggestions': getattr(m, 'replacements', [])
                 })
 
-            # Style issues
             style_issues = []
             if self.config["check_passive"]:
                 if self.lang == "en-US":
@@ -462,7 +624,6 @@ class CorrectoApp(QMainWindow):
 
         report_lines = []
 
-        # Grammar issues
         for issue in data.get("grammar_issues", []):
             suggestions = ', '.join(issue['suggestions'][:3]) if issue['suggestions'] else "—"
             block = f"[{self.tr['grammar']}] {issue['message']}\n" \
@@ -470,7 +631,6 @@ class CorrectoApp(QMainWindow):
                     f"{self.tr['suggestions']}: {suggestions}"
             report_lines.append(block)
 
-        # Style issues
         for issue in data.get("style_issues", []):
             block = f"[{self.tr['style']}] {issue['message']}"
             if issue.get('example'):
@@ -540,7 +700,6 @@ class CorrectoApp(QMainWindow):
         self.statusBar.showMessage(f"Report exported to {path}", 3000)
 
     def show_about(self):
-        """Show About dialog with your copyright."""
         logo_b64 = (
             "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9"
             "kT1Iw0AcxV9TpSIVBzuIOGSoThZERRy1CkWoQqgVWnUwufQLmjQkKS6OgmvBwY/FqoOLs64O"
@@ -554,7 +713,6 @@ class CorrectoApp(QMainWindow):
             "q40AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjUtMTItMTdUMTU6MjE6MTArMDA6MDCRk1aPAAAA"
             "AElFTkSuQmCC"
         )
-        
         about_html = f"""
         <div style="text-align: center; font-family: sans-serif;">
             <img src="image/png;base64,{logo_b64}" width="64" height="64" style="margin-bottom: 12px;">
@@ -584,17 +742,20 @@ class CorrectoApp(QMainWindow):
         self.dict_results.clear()
         if self.text_lang == "en-US":
             info = lookup_english(word)
-            if "error" in info:
-                self.dict_results.addItem(self.tr["install_nltk"])
-            else:
-                self.dict_results.addItem(f"{self.tr['def']}: {info['def']}")
-                if info["ex"]:
-                    self.dict_results.addItem(f"{self.tr['example']}: {info['ex']}")
+            self.dict_results.addItem(f"Word: {word}")
+            if info["pos"]:
+                self.dict_results.addItem(f"Part of speech: {info['pos']}")
+            self.dict_results.addItem(f"Definition: {info['def']}")
+            if info["ex"]:
+                self.dict_results.addItem(f"Example: {info['ex']}")
         else:
             info = lookup_french(word)
-            self.dict_results.addItem(f"{self.tr['def']}: {info['def']}")
+            self.dict_results.addItem(f"Mot : {word}")
+            if info["pos"]:
+                self.dict_results.addItem(f"Catégorie : {info['pos']}")
+            self.dict_results.addItem(f"Définition : {info['def']}")
             if info["ex"]:
-                self.dict_results.addItem(f"{self.tr['example']}: {info['ex']}")
+                self.dict_results.addItem(f"Exemple : {info['ex']}")
 
     def conjugate_verb(self):
         verb = self.conj_input.text().strip()
